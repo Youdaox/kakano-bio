@@ -40,9 +40,14 @@ const Navbar = () => {
       </Link>
 
       <div className="flex flex-row gap-8">
-        <Link href="/team" className="hover:text-gray-300 text-xl font-semibold">
-          Who we are
+        <Link href="/about" className="hover:text-gray-300 text-xl font-semibold">
+          What we do
         </Link>
+
+        <Link href="/team" className="hover:text-gray-300 text-xl font-semibold">
+          Who are we
+        </Link>
+
         <Link href="/contact" className="hover:text-gray-300 text-xl font-semibold">
           Services We Offer
         </Link>
