@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { useEffect, useState } from "react"
-import { nav } from 'framer-motion/client';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
