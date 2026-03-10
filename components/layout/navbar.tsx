@@ -1,25 +1,64 @@
+"use client"
+
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Navbar = () => {
-  return (
-    <nav className="relative flex flex-row items-center justify-center px-8 py-8 bg-linear-to-r from-primary via-secondary to-primary text-white">
-      <div className="flex flex-row gap-8">
-        <Link href="/about" className="hover:text-gray-300 text-xl font-semibold">
-          Who we are
-        </Link>
-        <Link href="/contact" className="hover:text-gray-300 text-xl font-semibold">
-          Get in touch
-        </Link>
-      </div>
+import { useEffect, useState } from "react"
 
-      <div className='absolute left-8 top-1/2 aspect-video w-48 -translate-y-1/2'>
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+
+  return (
+    <nav className={`fixed w-full z-50 flex flex-row items-center justify-between px-36 py-2 transition-all duration-300 
+      ${scrolled 
+        ? 'bg-background backdrop-blur-md shadow-2xl' 
+        : 'backdrop-blur-md shadow-md text-zinc-50'
+      }`}
+    >
+      <Link href="/" className='relative bg-transparent aspect-video w-48'>
         <Image
-          src="/logo.png"
+          src="/image.png"
           alt="Kakano Biosciences Logo"
           fill
           className="object-contain"
         />
+      </Link>
+
+      <div className="flex flex-row gap-8">
+        <Link href="/about" className="hover:text-gray-300 text-xl font-semibold">
+          What we do
+        </Link>
+
+        <Link href="/team" className="hover:text-gray-300 text-xl font-semibold">
+          Who are we
+        </Link>
+
+        <Link href="/contact" className="hover:text-gray-300 text-xl font-semibold">
+          Services We Offer
+        </Link>
+      </div>
+
+      <div className="flex flex-row gap-8">
+        <Link href="/login" className="hover:text-gray-300 text-xl font-semibold">
+          <button className={`px-4 py-2 border border-white rounded-full ${scrolled ? 'bg-white text-black' : 'bg-transparent'}`}>
+            Get In Touch
+          </button>
+        </Link>
       </div>
     </nav>
   );
