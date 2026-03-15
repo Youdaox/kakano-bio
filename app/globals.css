@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #F4F1EC;   /* Warm Sand */
+  --color-background: #E8E4DD;   /* Warm Sand */
   --color-foreground: #1A1A1A;   /* Charcoal */
 
   --color-primary: #2F4F3E;      /* Dark Moss */
@@ -23,15 +23,6 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.08) 30%,
-      rgba(0, 0, 0, 0.2) 100%
-    );
-    background-attachment: fixed;
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, sans-serif;
   }
   h1, h2, h3, h4 {
     @apply text-primary font-semibold;

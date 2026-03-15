@@ -4,9 +4,8 @@ import Subheading from "@/components/sections/homepage/subHeading";
 
 export default function Home() {
   return (
-    <div className=" min-h-screen text-white">
+    <div className="min-h-screen text-white">
       <Hero />
-      <Subheading />
       <About/>
 
     </div>

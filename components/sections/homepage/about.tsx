@@ -3,9 +3,9 @@ import Image from 'next/image';
 export default function About() {
   return (
     <section className="w-full">
-      <div className="flex min-h-128 w-full">
+      <div className="flex min-h-128 w-full py-12">
         {/* Left side - Text */}
-        <div className="w-1/2 flex items-center bg-muted px-10 lg:px-14">
+        <div className="w-1/2 flex items-center bg-transparent px-10 lg:px-14">
           <div className="max-w-xl text-left space-y-4">
             <h2 className="text-4xl font-bold">About Us</h2>
             <p className="mt-4 text-lg text-black">
