@@ -1,15 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #E8E4DD;   /* Warm Sand */
+  --color-background: #E8E4DD;   
   --color-foreground: #1A1A1A;   /* Charcoal */
 
   --color-primary: #2F4F3E;      /* Dark Moss */
   --color-secondary: #7A8F63;    /* Olive Green */
-  --color-accent: #2F4F3E;       /* Rust Orange */
-
-  --color-muted: #E8E4DD;
-  --color-border: #DDD7CF;
+  --color-accent: #7A8F63;       
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -43,20 +40,16 @@
     padding-block: 5rem;
   }
 
-  .card {
-    @apply bg-white border border-border rounded-md p-6 shadow-sm;
-  }
-
   .btn-primary {
-    @apply bg-primary text-white px-5 py-2 rounded-md transition;
+    @apply bg-secondary text-white px-5 py-2 rounded-md transition;
   }
 
   .btn-primary:hover {
-    @apply bg-secondary;
+    @apply bg-primary;
   }
 
   .btn-accent {
-    @apply bg-accent text-white px-5 py-2 rounded-md transition;
+    @apply bg-gray-800 text-white px-5 py-2 rounded-md transition;
   }
 
   .btn-accent:hover {
