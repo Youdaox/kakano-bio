@@ -9,7 +9,7 @@ export default function About() {
           <div className="max-w-xl text-left space-y-4">
             <h2 className="text-4xl font-bold">About Us</h2>
             <p className="mt-4 text-lg text-black">
-                Aoteroa&apos;s partner for innovative, culturally grounded molecular diagnostics — 
+                Aotearoa&apos;s partner for innovative, culturally grounded molecular diagnostics — 
                 combining global scientific leadership with deep local relationships.
             </p>
             <div className="mt-6 flex gap-4">

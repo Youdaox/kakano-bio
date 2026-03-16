@@ -5,11 +5,10 @@ const HeroButton = () => {
   return (
     <Link href="/team">
       <motion.button
-        className="rounded-full text-background px-14 py-3 font-bold border border-white/20 shadow-xl hover:shadow-2xl"
-        style={{ backgroundColor: "var(--color-accent)" }}
-        whileHover={{ backgroundColor: "#2F4F3E", scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ duration: 0.3 }}
+        className="cursor-pointer rounded-xl border border-white/35 bg-secondary px-7 py-3 text-sm font-semibold tracking-[0.04em] text-white shadow-lg shadow-black/20 transition-colors"
+        whileHover={{ scale: 1.02, backgroundColor: "#2F4F3E" }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ duration: 0.1, ease: "easeOut" }}
       >
         Who are we?   
       </motion.button>

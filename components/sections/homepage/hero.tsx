@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import HeroButton from '@/components/ui/buttons/HeroButton';
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-150 flex items-center justify-center overflow-hidden">
+    <section className="relative h-160 flex w-full items-end overflow-hidden">
       <Image
         src="/pe.avif"
         alt="Hero background"
@@ -17,18 +17,28 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-black/40" />
       <motion.div
-        className="relative z-10"
-        initial={{ opacity: 0, y: 20}}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        className="container-custom relative z-10 w-full pb-14 pt-40 sm:pb-18 lg:pb-24"
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="flex flex-col items-start max-w-3xl space-y-6 -translate-x-50 translate-y-20">
-          <h2 className="text-4xl text-zinc-50">Aoteroa&apos;s partner for innovative, culturally grounded molecular diagnostics — 
-                combining global scientific leadership with deep local relationships.</h2>
-          <HeroButton/>
+        <div className="max-w-3xl space-y-8">
+
+          <h1 className="text-4xl font-semibold leading-extratight text-zinc-50 sm:text-5xl lg:text-6xl">
+            Precision Molecular Diagnostics for Aotearoa.
+          </h1>
+
+          <p className="max-w-2xl text-base leading-relaxed text-zinc-200 sm:text-lg">
+            We combine world-class scientific practice with culturally grounded partnerships to deliver trusted,
+            high-impact diagnostic solutions for local communities and clinical teams.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <HeroButton />
+          </div>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
