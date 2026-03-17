@@ -1,107 +1,124 @@
+import Image from "next/image";
 
 interface TeamMember {
   name: string;
-  position: string;
+  position: string;  
   description: string;
+  image: string;
 }
 
-interface CardProps {
-  member: TeamMember;
-  isParent?: boolean;
-}
-
-const Card = ({ member, isParent = false }: CardProps) => {
-  return (
-    <div
-      className={`flex flex-col justify-center rounded-xl border p-5 text-center transition-transform duration-300 ${
-        isParent
-          ? "h-60 w-72 rounded-2xl border-white/30 bg-linear-to-br from-primary to-[#1f3a2c] text-white shadow-2xl ring-1 ring-black/20 md:h-72 md:w-80"
-          : "h-52 w-56 border-[#758f69] bg-[#b7c9ad] text-foreground shadow-sm md:h-56 md:w-64"
-      }`}
-    >
-      <p className={`font-semibold tracking-tight ${isParent ? "text-3xl text-amber-100" : "text-2xl"}`}>
-        {member.name}
-      </p>
-      <p
-        className={`mt-2 text-xs font-semibold uppercase tracking-[0.11em] ${
-          isParent ? "text-white/85" : "text-foreground/70"
-        }`}
-      >
-        {member.position}
-      </p>
-      <p className={`mt-3 text-sm leading-6 ${isParent ? "text-white/90" : "text-foreground/80"}`}>
-        {member.description}
-      </p>
-    </div>
-  );
-};
-
-const parentMember: TeamMember = {
+const leadMember: TeamMember = {
   name: "Jeremy Thompson",
-  position: "Founder & Executive Director",
+  position: "Founder & Director",
   description:
-    "Sets strategic direction, builds partnerships, and keeps the team focused on long-term impact.",
+    "description",
+  image: "/pe.avif",
 };
 
 const teamMembers: TeamMember[] = [
   {
     name: "Pilar Villablanca",
-    position: "Operations Lead",
+    position: "Partner",
     description:
-      "Coordinates daily workflows and ensures projects move smoothly from planning to delivery.",
+      "description",
+    image: "/nz.avif",
   },
   {
     name: "Adam Andreas",
-    position: "Community Programs Manager",
+    position: "Partner",
     description:
-      "Designs engagement programs and supports partners across local community initiatives.",
+      "description",
+    image: "/nz1.avif",
   },
   {
     name: "Sathish Puthigae",
-    position: "Research & Data Analyst",
+    position: "Partner",
     description:
-      "Turns field insights into actionable reports to guide decisions and measure outcomes.",
+      "description",
+    image: "/pe.avif",
   },
   {
     name: "Alan Flynn",
-    position: "Partnerships Coordinator",
+    position: "Partner",
     description:
-      "Maintains sponsor relationships and helps launch collaborative projects with external teams.",
+      "description",
+    image: "/nz.avif",
   },
 ];
 
 const Team = () => {
   return (
-    <section className="bg-accent px-4 py-12 md:px-8 md:py-16">
-      <div className="relative mx-auto flex min-h-[90vh] max-w-352 flex-col items-center justify-center px-6 py-10 md:px-10 md:py-14">
+    <section className="bg-background px-4 py-16 md:px-8 md:py-24">
+      <div className="container-custom">
+        <header className="mb-10 grid grid-cols-1 gap-6 border-b border-primary/15 pb-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-8">
+            <h2 className="mt-3 text-3xl leading-tight md:text-5xl">
+              Meet the team behind <br />
+              <span className="block text-primary">Kakano Biosciences</span>
+            </h2>
+          </div>
+        </header>
 
-        <div className="org-fade-up org-delay-1 z-10 flex justify-center">
-          <Card member={parentMember} isParent />
-        </div>
-
-      <div className="org-fade-up org-delay-2 z-10 mt-5 flex flex-col items-center gap-4 md:hidden">
-          <div className="h-5 w-0.5 rounded-full bg-gray-700/80" />
-          {teamMembers.map((member, index) => (
-            <div key={member.name} className="org-fade-up" style={{ animationDelay: `${260 + index * 90}ms` }}>
-              <Card member={member} />
+        <div className="grid grid-cols-1 rounded-lg border border-primary/20 bg-white shadow-2xl lg:grid-cols-12">
+          <div className="flex min-h-80 items-center justify-center border-b border-primary/20 bg-primary/5 lg:col-span-4 lg:min-h-95 lg:border-b-0 lg:border-r">
+            <div className="relative w-[90%] h-[90%] overflow-hidden">
+              <Image
+                src={leadMember.image}
+                alt={leadMember.name}
+                fill
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                className="object-cover"
+                priority
+              />
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="org-fade-up org-delay-2 relative z-10 mt-5 hidden h-14 w-6xl md:block">
-          <div className="org-line-grow-y absolute left-1/2 top-0 h-5 w-0.5 -translate-x-1/2 rounded-full bg-gray-700/80" />
-          <div className="org-line-grow-x absolute left-[12.5%] right-[12.5%] top-5 h-0.5 rounded-full bg-gray-700/80" />
-          <div className="absolute left-0 right-0 top-5 grid grid-cols-4">
-            {teamMembers.map((member) => (
-              <div key={`${member.name}-line`} className="org-line-grow-y mx-auto h-5 w-0.5 rounded-full bg-gray-700/80" />
-            ))}
+          <div className="p-7 lg:col-span-8 lg:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
+              {leadMember.position}
+            </p>
+            <h3 className="mt-3 text-3xl font-semibold leading-tight text-primary md:text-4xl">
+              {leadMember.name}
+            </h3>
+            <p className="mt-5 max-w-3xl text-sm leading-relaxed text-zinc-600 md:text-base">
+              {leadMember.description}
+            </p>
+
           </div>
         </div>
 
-        <div className="z-10 mt-2 hidden p-6 md:flex md:justify-center md:gap-10">
-          {teamMembers.map((member, index) => (
-            <div key={member.name} className="org-fade-up" style={{ animationDelay: `${350 + index * 110}ms` }}>
-              <Card member={member} />
+        <div className="mt-7 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {teamMembers.map((member) => (
+            <div
+              key={member.name}
+              className="border border-primary/12 bg-white p-5 shadow-[0_12px_30px_-24px_rgba(20,20,20,0.55)] transition-all duration-300 hover:border-secondary/35"
+            >
+              <div className="grid grid-cols-[88px_1fr] gap-4 sm:grid-cols-[104px_1fr] sm:gap-5">
+                <div className="relative h-24 w-full overflow-hidden border border-primary/20 bg-primary/5 sm:h-28">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    sizes="104px"
+                    className="object-cover"
+                  />
+                </div>
+
+                <div>
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <h4 className="text-xl leading-tight text-primary">{member.name}</h4>
+                      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">
+                        {member.position}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                    {member.description}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -110,4 +127,4 @@ const Team = () => {
   );
 };
 
-export default Team
+export default Team;
