@@ -42,17 +42,6 @@ const Footer = () => {
               <li className="leading-relaxed">
                 Auckland, New Zealand
               </li>
-              <li className="pt-2">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full border border-secondary/50 px-4 py-2 text-xs font-medium text-secondary transition-all duration-200 hover:border-secondary hover:bg-secondary/10 hover:text-white"
-                >
-                  Get In Touch
-                  <svg className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                  </svg>
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
