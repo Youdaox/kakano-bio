@@ -8,9 +8,11 @@ export default function About() {
         <div className="w-1/2 flex items-center bg-transparent px-10 lg:px-14">
           <div className="max-w-xl text-left space-y-4">
             <h2 className="text-4xl font-bold">About Us</h2>
-            <p className="mt-4 text-lg text-black">
-                Aotearoa&apos;s partner for innovative, culturally grounded molecular diagnostics — 
-                combining global scientific leadership with deep local relationships.
+            <p className='text-gray-800'>
+              Established in March 2026 Kākano Biosciences is an international team of subject matter experts that aims to support, complement and enhance domestic and global scientific communication and innovation in the areas of biosecurity, molecular diagnostics and surveillance.
+              <br />
+              <br />
+              Kākano Biosciences sets out to offer independent cutting-edge biotech know-how for every audience.
             </p>
             <div className="mt-6 flex gap-4">
               <button className="btn-primary mt-6">Contact us</button>
