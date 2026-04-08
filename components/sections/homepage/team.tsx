@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Team = () => {
   return (
-    <section className="bg-zinc-50 py-16">
+    <section className="bg-zinc-50 scroll-mt-24 py-36" id="team">
 
       <div className="mx-auto grid max-w-350 grid-cols-1 overflow-hidden rounded-2xl bg-zinc-50 lg:grid-cols-12">
         <div className="relative min-h-80 lg:col-span-4 lg:min-h-120">

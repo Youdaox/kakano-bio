@@ -49,25 +49,20 @@ const Navbar = () => {
       </Link>
 
       <div className="flex flex-row items-center gap-10">
-        <Link href="/about" className={navLinkClass("/about")}>
-          What we do
+        <Link href="/#about" className={navLinkClass("/about")}>
+          About Us
           <span className={`absolute -bottom-1 left-0 h-px bg-secondary transition-all duration-200 ${pathname === "/about" ? "w-full" : "w-0 group-hover:w-full"}`} />
         </Link>
 
-        <Link href="/team" className={navLinkClass("/team")}>
-          Who are we
+        <Link href="/#team" className={navLinkClass("/team")}>
+          Our Team
           <span className={`absolute -bottom-1 left-0 h-px bg-secondary transition-all duration-200 ${pathname === "/team" ? "w-full" : "w-0 group-hover:w-full"}`} />
-        </Link>
-
-        <Link href="/contact" className={navLinkClass("/contact")}>
-          Services We Offer
-          <span className={`absolute -bottom-1 left-0 h-px bg-secondary transition-all duration-200 ${pathname === "/contact" ? "w-full" : "w-0 group-hover:w-full"}`} />
         </Link>
       </div>
 
       <div className="flex flex-row gap-8">
         <Link
-          href="/contact"
+          href="/#contact"
           className={`inline-flex items-center gap-2 rounded-full border border-secondary/50 px-6 py-4 text-sm font-medium text-white transition-all duration-200 hover:border-secondary hover:bg-transparent hover:text-secondary ${scrolled ? "bg-secondary" : "bg-transparent"}`}
         >
           Get In Touch
