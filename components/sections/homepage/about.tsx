@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <section className="w-full mx-auto px-32">
+    <section className="w-full mx-auto max-w-350 py-16">
       <div className="flex min-h-128 w-full py-12">
         {/* Left side - Text */}
         <div className="w-1/2 flex items-center bg-transparent px-10 lg:px-14">
@@ -15,8 +15,7 @@ export default function About() {
               Kākano Biosciences sets out to offer independent cutting-edge biotech know-how for every audience.
             </p>
             <div className="mt-6 flex gap-4">
-              <button className="btn-primary mt-6">Contact us</button>
-              <button className="btn-primary bg-transparent outline-gray-800 outline-1 text-gray-800 mt-6">Learn More</button>
+              <button className="btn-primary bg-transparent outline-gray-800 outline-1 text-gray-800 mt-6 cursor-pointer">Learn More</button>
             </div>
           </div>
         </div>

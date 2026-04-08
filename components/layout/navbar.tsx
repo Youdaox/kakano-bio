@@ -66,10 +66,14 @@ const Navbar = () => {
       </div>
 
       <div className="flex flex-row gap-8">
-        <Link href="/contact" className="text-sm font-semibold tracking-[0.03em]">
-          <button className={`cursor-pointer rounded-full border px-5 py-2.5 transition-all duration-200 ${scrolled ? "border-primary bg-primary text-white hover:bg-secondary hover:border-secondary" : "border-white/80 bg-transparent text-white hover:bg-white/10"}`}>
-            Get In Touch
-          </button>
+        <Link
+          href="/contact"
+          className={`inline-flex items-center gap-2 rounded-full border border-secondary/50 px-6 py-4 text-sm font-medium text-white transition-all duration-200 hover:border-secondary hover:bg-transparent hover:text-secondary ${scrolled ? "bg-secondary" : "bg-transparent"}`}
+        >
+          Get In Touch
+          <svg className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+          </svg>
         </Link>
       </div>
     </nav>

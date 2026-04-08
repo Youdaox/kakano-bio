@@ -26,31 +26,7 @@ const Footer = () => {
 
           <div className="hidden md:block md:col-span-1" />
 
-          <div className="md:col-span-3 flex flex-col gap-4">
-            <p className="text-xs font-semibold uppercase tracking-widest text-secondary">
-              Navigate
-            </p>
-            <ul className="flex flex-col gap-3">
-              {[
-                { label: "Home", href: "/" },
-                { label: "What We Do", href: "/about" },
-                { label: "Who Are We", href: "/team" },
-                { label: "Services We Offer", href: "/contact" },
-              ].map(({ label, href }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="group flex items-center gap-2 text-sm text-zinc-400 transition-colors duration-200 hover:text-white"
-                  >
-                    <span className="h-px w-4 bg-zinc-600 transition-all duration-200 group-hover:w-6 group-hover:bg-secondary" />
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="md:col-span-3 flex flex-col gap-4">
+          <div className="md:col-span-6 flex flex-col gap-4">
             <p className="text-xs font-semibold uppercase tracking-widest text-secondary">
               Contact
             </p>
