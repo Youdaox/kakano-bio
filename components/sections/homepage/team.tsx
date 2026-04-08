@@ -7,7 +7,7 @@ const Team = () => {
 
       <div className="mx-auto grid max-w-350 grid-cols-1 overflow-hidden rounded-2xl bg-zinc-50 lg:grid-cols-12">
         <div className="relative min-h-80 lg:col-span-4 lg:min-h-120">
-          <div className="relative h-full overflow-hidden shadow-lg">
+          <div className="relative h-full overflow-hidden shadow-lg rounded-2xl">
             <Image
               src="/team/lead-profile.jpg"
               alt="Jeremy Thompson, lead of Kākano Biosciences"
