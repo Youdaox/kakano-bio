@@ -16,7 +16,7 @@ export default function About() {
               Kākano Biosciences sets out to offer independent cutting-edge biotech know-how for every audience.
             </p>
             <div className="flex">
-              <Link href="/#contact" className="btn-primary bg-transparent outline-gray-800 outline-1 text-gray-800 cursor-pointer">Learn More</Link>
+              <Link href="/#contact" className="btn-primary bg-transparent border border-gray-800 text-gray-800 cursor-pointer hover:text-gray-800/80">Learn More</Link>
             </div>
           </div>
         </div>

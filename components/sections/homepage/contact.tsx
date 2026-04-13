@@ -13,7 +13,6 @@ const initialForm = {
 export default function Contact() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-  const [notice, setNotice] = useState("");
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
@@ -141,7 +140,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="inline-flex mx-auto flex-1 items-center justify-center gap-2 rounded-full bg-secondary px-36 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary disabled:cursor-not-allowed disabled:opacity-70"
+                  className="inline-flex mx-auto flex-1 cursor-pointer items-center justify-center gap-2 rounded-full bg-secondary px-36 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary disabled:cursor-not-allowed disabled:opacity-70"
                 >
                   {status === "submitting" ? "Sending..." : "Send message"}
                 </button>

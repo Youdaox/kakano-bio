@@ -70,7 +70,7 @@ const Navbar = () => {
           ))}
           <Link
             href="/#contact"
-            className={`inline-flex items-center rounded-full border border-zinc-50 bg-secondary px-5 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white transition-all hover:bg-transparent hover:text-secondary ${scrolled ? "bg-secondary" : "bg-transparent"}`}
+            className={`inline-flex items-center rounded-full border border-primary bg-secondary px-5 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white transition-all hover:bg-primary ${scrolled ? "bg-secondary" : "bg-transparent"}`}
           >
             Get In Touch
           </Link>
