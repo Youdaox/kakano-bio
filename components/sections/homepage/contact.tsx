@@ -13,6 +13,7 @@ const initialForm = {
 export default function Contact() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [notice, setNotice] = useState("");
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
