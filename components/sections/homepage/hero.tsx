@@ -29,7 +29,7 @@ const Hero = () => {
           </h1>
 
           <p className="max-w-2xl text-base leading-relaxed text-zinc-200 sm:text-lg">
-            An independent service providing consultative global-to-local expertise in plant health, biosecurity, molecular diagnostics and innovation.
+            An independent service providing consultative global-to-local expertise in biosecurity, molecular diagnostics and innovation.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">

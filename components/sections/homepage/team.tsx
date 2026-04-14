@@ -21,16 +21,13 @@ const Team = () => {
 
         <div className="p-10 sm:p-12 lg:col-span-8 lg:px-24 lg:py-14">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Led by
+            Who are we
           </p>
           <h3 className="my-4 text-3xl font-semibold text-gray-900 md:text-4xl">
             Jeremy Thompson
           </h3>
           <p className="mt-6 max-w-xl leading-relaxed text-gray-600 md:text-base">
-            With more than 20 years of global experience delivering plant
-            health and biosecurity outcomes across government, academia, and
-            research organisations, Jeremy specialises in turning complex
-            biological information into clear, practical language.
+            Jeremy has more than 20 years of global cross-cultural experience leading and collaborating in cutting-edge research. All while lecturing, training and mentoring at Ivy League and international centres of excellence. He specialises in turning complex biological ideas into clear, practical language.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -70,6 +67,10 @@ const Team = () => {
           </div>
         </div>
       </div>
+
+      <p className="mx-auto mt-32 max-w-350 px-6 text-center text-sm font-medium text-gray-600">
+        Stay tuned for more...
+      </p>
     </section>
   );
 };
