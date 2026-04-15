@@ -2,6 +2,7 @@
 
 import type { ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
+import { toast } from "sonner"
 
 const initialForm = {
   name: "",
@@ -43,9 +44,11 @@ export default function Contact() {
       setStatus("success");
       setNotice(data?.message || "Thanks — your message has been sent.");
       setForm(initialForm);
+      toast.success("Message sent successfully!");
     } catch (error) {
       setStatus("error");
       setNotice(error instanceof Error ? error.message : "Unable to send message.");
+      toast.error(notice || "Unable to send message.");
     }
   };
 
