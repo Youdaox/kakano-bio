@@ -95,7 +95,7 @@ const Navbar = () => {
       <div
         className={[
           "md:hidden",
-          "overflow-hidden border-t border-zinc-200/60 bg-[rgb(251,250,246,0.94)] px-6 transition-all duration-300",
+          "overflow-hidden bg-[rgb(251,250,246,0.94)] px-6 transition-all duration-300",
           isMenuOpen ? "max-h-72 py-6" : "max-h-0 py-0",
         ].join(" ")}
       >

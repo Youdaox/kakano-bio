@@ -32,7 +32,7 @@ const Team = () => {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/jeremy-thompson-5896293a9"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all duration-200 hover:-translate-y-px hover:border-primary/30 hover:text-primary hover:shadow-md"
               aria-label="LinkedIn"
@@ -48,27 +48,11 @@ const Team = () => {
               LinkedIn
             </Link>
 
-            <Link
-              href="https://www.facebook.com"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all duration-200 hover:-translate-y-px hover:border-primary/30 hover:text-primary hover:shadow-md"
-              aria-label="Facebook"
-            >
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                className="h-4 w-4"
-                fill="currentColor"
-              >
-                <path d="M13.5 22v-7h2.34l.35-2.73H13.5V10.5c0-.79.22-1.33 1.36-1.33H16V6.73c-.28-.04-1.25-.13-2.38-.13-2.36 0-3.97 1.44-3.97 4.08v1.58H7.33V15h2.32v7h3.85Z" />
-              </svg>
-              Facebook
-            </Link>
           </div>
         </div>
       </div>
 
-      <p className="mx-auto mt-32 max-w-350 px-6 text-center text-sm font-medium text-gray-600">
+      <p className="mx-auto mt-32 max-w-350 px-6 text-center text-3xl md:text-4xl tracking-tighter font-medium ">
         Stay tuned for more...
       </p>
     </section>

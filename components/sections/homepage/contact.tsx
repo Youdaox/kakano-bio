@@ -54,15 +54,20 @@ export default function Contact() {
 
   return (
     <section id="contact" className="bg-background scroll-mt-24">
-        <div className="mx-auto my-16 max-w-350 rounded-2xl ">
+        <div className="mx-auto py-16 max-w-350 rounded-2xl ">
           <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="p-8 sm:p-10 lg:p-12">
-              <h2 className="mt-4 text-3xl font-bold leading-tight text-primary md:text-4xl">
+              <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-primary md:text-4xl">
                 Get in Touch.
               </h2>
               <p className="mt-5 max-w-md text-sm leading-relaxed text-zinc-600 md:text-base">
-                Share a few details and we&apos;ll get back to you as soon as
-                possible. We aim to respond to all inquiries as soon as possible.
+                Whether wanting to collaborate or just pick our brains, we&apos;ll aim to get back to you as soon as possible. 
+                <br />
+                <br />
+                Note - services and fees will be adjusted accordingly, depending on whether you are from the private sector, academia, non-profit or government. 
+                                <br />
+                <br />
+                We are available for both in-person and virtual consultations.
               </p>
 
               <div className="mt-8 space-y-4 text-sm text-zinc-700">
@@ -81,7 +86,7 @@ export default function Contact() {
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
                     Location
                   </p>
-                  <p className="mt-2">Auckland, New Zealand</p>
+                  <p className="mt-2">Tāmaki Makaurau Auckland, Aotearoa New Zealand.</p>
                 </div>
               </div>
             </div>

@@ -10,12 +10,12 @@ const Footer = () => {
       <div className="container-custom py-14">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-6 flex flex-col gap-5">
-            <h4 className="font-[var(--font-display)] text-3xl font-semibold tracking-wide text-zinc-50">
-              Kakano Biosciences
+            <h4 className="text-3xl font-medium tracking-tighter text-zinc-50">
+              Kākano Biosciences
             </h4>
             <p className="max-w-sm text-sm leading-relaxed text-zinc-400">
               Aotearoa&apos;s partner for innovative, culturally grounded molecular
-              diagnostics, blending global scientific leadership with deep
+              diagnostics, blending global scientific leadership with strong
               local relationships.
             </p>
           </div>
@@ -27,14 +27,14 @@ const Footer = () => {
             <ul className="flex flex-col gap-3 text-sm text-zinc-400">
               <li>
                 <a
-                  href="mailto:info@kakanobiosciences.com"
+                  href="mailto:info@kakanobiosciences.co.nz"
                   className="transition-colors duration-200 hover:text-white"
                 >
                   info@kakanobiosciences.co.nz
                 </a>
               </li>
               <li className="leading-relaxed">
-                Auckland, New Zealand
+                Tāmaki Makaurau Auckland, Aotearoa New Zealand.
               </li>
               <li>
                 <Link href="/#contact" className="transition-colors duration-200 hover:text-zinc-100">
@@ -47,7 +47,7 @@ const Footer = () => {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-zinc-700/60 pt-6 sm:flex-row">
           <p className="text-xs text-zinc-500">
-            &copy; {year} Kakano Biosciences. All rights reserved.
+            &copy; {year} Kākano Biosciences. All rights reserved.
           </p>
         </div>
       </div>

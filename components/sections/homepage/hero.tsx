@@ -24,11 +24,11 @@ const Hero = () => {
       >
         <div className="max-w-3xl space-y-8">
 
-          <h1 className="text-4xl font-semibold leading-extratight text-zinc-50 sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-semibold leading-extratight tracking-tighter text-zinc-50 sm:text-5xl lg:text-6xl">
             Innovation in Diagnostics and Surveillance.
           </h1>
 
-          <p className="max-w-2xl text-base leading-relaxed text-zinc-200 sm:text-lg">
+          <p className="max-w-2xl text-base tracking-tight text-zinc-200 sm:text-lg">
             An independent service providing consultative global-to-local expertise in biosecurity, molecular diagnostics and innovation.
           </p>
 
