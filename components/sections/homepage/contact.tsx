@@ -54,9 +54,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className="bg-background scroll-mt-24">
-        <div className="mx-auto py-16 max-w-350 rounded-2xl ">
-          <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="p-8 sm:p-10 lg:p-12">
+        <div className="mx-auto max-w-350 rounded-2xl px-4 py-12 sm:px-6 sm:py-16 lg:px-0">
+          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-0">
+            <div className="rounded-2xl bg-transparent p-4 sm:p-8 lg:p-12">
               <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-primary md:text-4xl">
                 Get in Touch.
               </h2>
@@ -91,7 +91,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="p-8 sm:p-10 lg:p-12">
+            <form onSubmit={handleSubmit} className="rounded-2xl bg-transparent p-4 sm:p-8 lg:p-12">
               <div className="grid gap-5 sm:grid-cols-2">
                 <label className="space-y-2 sm:col-span-1">
                   <span className="text-sm font-medium text-zinc-700">Name</span>
@@ -149,7 +149,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="inline-flex mx-auto flex-1 cursor-pointer items-center justify-center gap-2 rounded-full bg-secondary px-36 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary disabled:cursor-not-allowed disabled:opacity-70"
+                  className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-secondary px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary sm:mx-auto sm:w-auto sm:flex-1 sm:px-10 disabled:cursor-not-allowed disabled:opacity-70"
                 >
                   {status === "submitting" ? "Sending..." : "Send message"}
                 </button>
