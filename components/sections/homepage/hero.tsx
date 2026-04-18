@@ -2,8 +2,8 @@
 
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from "framer-motion";
-import HeroButton from '@/components/ui/buttons/HeroButton';
 
 const Hero = () => {
   return (
@@ -33,7 +33,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
-            <HeroButton />
+            <Link
+              href="/#about"
+              className="inline-flex items-center justify-center rounded-full border border-primary bg-secondary px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white shadow-sm transition-all duration-200 hover:bg-primary"
+            >
+              Who are we?
+            </Link>
           </div>
         </div>
       </motion.div>
