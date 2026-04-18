@@ -29,7 +29,7 @@ const Navbar = () => {
   const navLinkClass = (href: string) => {
     const active = pathname === href;
 
-    return `group relative text-[0.98rem] font-medium tracking-[0.02em] transition-colors duration-200 ${
+    return `group relative text-md font-medium tracking-tighter transition-colors duration-200 ${
       active
         ? "text-secondary"
         : scrolled
