@@ -13,7 +13,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Kakano Biosciences",
-  description: "Kakano Biosciences",
+  description: "Kākano Biosciences is an international team of subject matter experts that supports and enhances scientific communication and innovation across biosecurity, molecular diagnostics, and surveillance.",
 };
 
 export default function RootLayout({
