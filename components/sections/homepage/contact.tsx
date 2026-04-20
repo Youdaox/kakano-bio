@@ -76,10 +76,10 @@ export default function Contact() {
                     Email
                   </p>
                   <a
-                    href="mailto:info@kakanobiosciences.co.nz"
+                    href="mailto:info@kākanobiosciences.com"
                     className="mt-2 inline-block transition-colors hover:text-primary"
                   >
-                    info@kakanobiosciences.co.nz
+                    info@kākanobiosciences.com
                   </a>
                 </div>
                 <div>

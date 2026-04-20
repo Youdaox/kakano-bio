@@ -27,10 +27,10 @@ const Footer = () => {
             <ul className="flex flex-col gap-3 text-sm text-zinc-400">
               <li>
                 <a
-                  href="mailto:info@kakanobiosciences.co.nz"
+                  href="mailto:info@kākanobiosciences.com"
                   className="transition-colors duration-200 hover:text-white"
                 >
-                  info@kakanobiosciences.co.nz
+                  info@kākanobiosciences.com
                 </a>
               </li>
               <li className="leading-relaxed">
