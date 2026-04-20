@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       .join("\n");
 
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "Kākano Bio <onboarding@resend.dev>",
       to: recipient,
       subject: "New Contact Form Message",
       text,
