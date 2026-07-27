@@ -4,7 +4,7 @@ import Link from "next/link";
 const Team = () => {
   return (
     <section className="bg-zinc-50 scroll-mt-24 pt-14 pb-10 sm:pt-20 sm:pb-14 lg:pt-28 lg:pb-16" id="team">
-      <div className="mx-auto grid max-w-350 grid-cols-1 gap-6 px-4 sm:gap-8 sm:px-6 lg:grid-cols-12 lg:gap-0">
+      <div className="container-custom grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-12 lg:gap-0">
         <div className="relative min-h-72 sm:min-h-80 lg:col-span-4 lg:min-h-120">
           <div className="relative h-full overflow-hidden shadow-lg rounded-2xl">
             <Image
@@ -18,7 +18,7 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="px-1 py-2 sm:px-2 lg:col-span-8 lg:px-16 lg:py-10 xl:px-24 xl:py-14">
+        <div className="py-2 lg:col-span-8 lg:px-16 lg:py-10 xl:px-24 xl:py-14">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
             Who are we
           </p>

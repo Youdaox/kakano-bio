@@ -71,7 +71,7 @@ export default function About() {
             <figure>
               <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-2xl sm:aspect-16/10 lg:aspect-4/5">
                 <Image
-                  src="/nz2.jpg"
+                  src="/nz1.avif"
                   alt={about.imageCaption.en}
                   fill
                   className="object-cover"

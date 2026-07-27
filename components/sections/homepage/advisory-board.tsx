@@ -7,8 +7,8 @@ const AdvisoryBoard = () => {
       className="bg-zinc-50 scroll-mt-24 pb-14 sm:pb-20 lg:pb-28"
       id="advisory-board"
     >
-      <div className="mx-auto max-w-350 px-4 sm:px-6">
-        <div className="border-t border-zinc-200 pt-12 sm:pt-16">
+      <div className="container-custom">
+        <div className="border-t border-zinc-300 pt-12 sm:pt-16">
           <p className="eyebrow">Advisory board</p>
           <h3 className="mt-3 max-w-2xl text-2xl font-semibold sm:text-3xl md:text-4xl">
             The expertise behind the work.
@@ -21,16 +21,6 @@ const AdvisoryBoard = () => {
               key={member.name}
               className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-sm"
             >
-              {/* Soft accent wash behind the header. */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-linear-to-br from-accent/12 via-secondary/6 to-transparent opacity-80"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute inset-x-0 top-0 h-0.5 bg-secondary/50"
-              />
-
               <header className="relative flex items-center gap-5 p-6 pb-5 sm:gap-6 sm:p-8 sm:pb-6">
                 <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded-xl shadow-md ring-1 ring-black/5 sm:h-28 sm:w-24">
                   <Image
@@ -49,26 +39,6 @@ const AdvisoryBoard = () => {
                   <p className="mt-1.5 text-sm font-medium leading-snug text-secondary">
                     {member.role}
                   </p>
-                  {member.location ? (
-                    <p className="mt-2 inline-flex items-center gap-1.5 text-xs text-muted">
-                      <svg
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        className="h-3.5 w-3.5 shrink-0"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"
-                        />
-                        <circle cx="12" cy="10" r="2.5" />
-                      </svg>
-                      {member.location}
-                    </p>
-                  ) : null}
                 </div>
               </header>
 
