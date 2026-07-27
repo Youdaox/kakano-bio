@@ -4,6 +4,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from "framer-motion";
+import Bilingual from "@/components/ui/Bilingual";
+import { hero } from "@/lib/content/bilingual";
 
 const Hero = () => {
   return (
@@ -25,20 +27,39 @@ const Hero = () => {
       >
         <div className="max-w-3xl space-y-6 sm:space-y-8">
 
-          <h1 className="text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl sm:tracking-tighter lg:text-6xl lg:leading-extratight">
-            Innovation in Diagnostics and Surveillance.
-          </h1>
+          <Bilingual
+            as="h1"
+            hint={false}
+            en={hero.title.en}
+            mi={hero.title.mi}
+            className="text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl sm:tracking-tighter lg:text-6xl lg:leading-extratight"
+            miClassName="text-zinc-50"
+          />
 
-          <p className="max-w-2xl text-sm leading-relaxed tracking-tight text-zinc-200 sm:text-lg">
-            An independent service providing consultative global-to-local expertise in biosecurity, molecular diagnostics and innovation.
-          </p>
+          <Bilingual
+            as="p"
+            en={hero.subtitle.en}
+            mi={hero.subtitle.mi}
+            className="max-w-2xl text-sm leading-relaxed tracking-tight text-zinc-200 sm:text-lg"
+            miClassName="text-zinc-200"
+          />
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link
               href="/#about"
-              className="inline-flex w-full items-center justify-center rounded-full border border-primary bg-secondary px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white shadow-sm transition-all duration-200 hover:bg-primary sm:w-auto"
+              className="group/cta inline-flex w-full items-center justify-center rounded-full border border-primary bg-secondary px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white shadow-sm transition-all duration-200 hover:bg-primary sm:w-auto"
             >
-              Who are we?
+              <span className="relative grid">
+                <span className="col-start-1 row-start-1 transition-opacity duration-300 group-hover/cta:opacity-0">
+                  {hero.cta.en}
+                </span>
+                <span
+                  lang="mi"
+                  className="col-start-1 row-start-1 opacity-0 transition-opacity duration-300 group-hover/cta:opacity-100"
+                >
+                  {hero.cta.mi}
+                </span>
+              </span>
             </Link>
           </div>
         </div>

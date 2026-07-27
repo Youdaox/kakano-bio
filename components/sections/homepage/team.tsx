@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Team = () => {
   return (
-    <section className="bg-zinc-50 scroll-mt-24 py-14 sm:py-20 lg:py-28" id="team">
+    <section className="bg-zinc-50 scroll-mt-24 pt-14 pb-10 sm:pt-20 sm:pb-14 lg:pt-28 lg:pb-16" id="team">
       <div className="mx-auto grid max-w-350 grid-cols-1 gap-6 px-4 sm:gap-8 sm:px-6 lg:grid-cols-12 lg:gap-0">
         <div className="relative min-h-72 sm:min-h-80 lg:col-span-4 lg:min-h-120">
           <div className="relative h-full overflow-hidden shadow-lg rounded-2xl">
@@ -50,10 +50,6 @@ const Team = () => {
           </div>
         </div>
       </div>
-
-      <p className="mx-auto mt-12 max-w-350 px-6 text-center text-2xl font-medium tracking-tighter sm:mt-16 sm:text-3xl md:text-4xl">
-        Stay tuned for more...
-      </p>
     </section>
   );
 };

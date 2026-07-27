@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Bilingual from '@/components/ui/Bilingual';
+import { about } from '@/lib/content/bilingual';
 
 const specialties = [
   'Biocontainment',
@@ -25,21 +27,27 @@ export default function About() {
         <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="order-2 lg:order-1 lg:col-span-7">
             <div className="max-w-xl text-left">
-              <h2 className="section-title tracking-tight">
-                About us.
-              </h2>
+              <Bilingual
+                as="h2"
+                hint={false}
+                en={about.title.en}
+                mi={about.title.mi}
+                className="section-title tracking-tight"
+              />
 
-              <p className="mt-6 text-sm leading-relaxed text-muted sm:text-base">
-                Established in March 2026, Kākano Biosciences is an international team
-                of subject matter experts that supports and enhances scientific
-                communication and innovation across biosecurity, molecular diagnostics,
-                and surveillance.
-              </p>
+              <Bilingual
+                as="p"
+                en={about.body.en}
+                mi={about.body.mi}
+                className="mt-6 text-sm leading-relaxed text-muted sm:text-base"
+              />
 
-              <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-                We provide independent, cutting-edge biotech know-how for every
-                audience.
-              </p>
+              <Bilingual
+                as="p"
+                en={about.bodySecondary.en}
+                mi={about.bodySecondary.mi}
+                className="mt-4 text-sm leading-relaxed text-muted sm:text-base"
+              />
 
               <div className="mt-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
@@ -60,16 +68,24 @@ export default function About() {
           </div>
 
           <div className="order-1 lg:order-2 lg:col-span-5">
-            <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-2xl sm:aspect-16/10 lg:aspect-4/5">
-              <Image
-                src="/nz1.avif"
-                alt="About section image"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
+            <figure>
+              <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-2xl sm:aspect-16/10 lg:aspect-4/5">
+                <Image
+                  src="/nz2.jpg"
+                  alt={about.imageCaption.en}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <Bilingual
+                as="figcaption"
+                en={about.imageCaption.en}
+                mi={about.imageCaption.mi}
+                className="mt-3 text-xs leading-relaxed text-muted sm:text-sm"
               />
-            </div>
+            </figure>
           </div>
         </div>
       </div>
