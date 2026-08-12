@@ -34,7 +34,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="leading-relaxed">
-                Tāmaki Makaurau Auckland, Aotearoa New Zealand.
+                Half Moon Bay, Tāmaki Makaurau Auckland, Aotearoa New Zealand.
               </li>
               <li>
                 <Link href="/#contact" className="transition-colors duration-200 hover:text-zinc-100">

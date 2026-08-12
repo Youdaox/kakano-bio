@@ -86,7 +86,9 @@ export default function Contact() {
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
                     Location
                   </p>
-                  <p className="mt-2">Tāmaki Makaurau Auckland, Aotearoa New Zealand.</p>
+                  <p className="mt-2">
+                    Half Moon Bay, Tāmaki Makaurau Auckland, Aotearoa New Zealand.
+                  </p>
                 </div>
               </div>
             </div>

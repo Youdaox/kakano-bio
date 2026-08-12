@@ -87,16 +87,32 @@ export const advisoryBoard: AdvisoryMember[] = [
       "Nursery Production",
     ],
   },
+  {
+    name: "Bill Dyck",
+    role: "Science & Technology Broker, Forest Biosecurity & Environmental Sciences",
+    image: "/team/bill-dyck.jpg",
+    bio: [
+      "Bill is a science & technology broker specializing in forest biosecurity and environmental sciences. Previously a General Manager in Carter Holt Harvey Forests and before that a forest site productivity scientist and science manager, he has worked with industry, government agencies and science organisations for more than 40 years.",
+      "Bill is very interested in biosecurity surveillance and diagnostics and believes the future is more advanced technologies at the border and inside the border for early detection of insect pests and pathogens. He is particularly excited about the opportunities to apply eDNA technology for early detection of unwanted organisms.",
+    ],
+    focusAreas: [
+      "Forest Biosecurity",
+      "Environmental Sciences",
+      "Surveillance & Diagnostics",
+      "eDNA Technology",
+    ],
+  },
 ];
 
 /** Placeholder slots shown while further advisory appointments are confirmed. */
-export const advisoryBoardPendingCount = 3;
+export const advisoryBoardPendingCount = 2;
 
 export type Project = {
   title: string;
   detail?: string;
   timeframe?: string;
   funder?: string;
+  link?: { label: string; href: string };
 };
 
 export const projects: Project[] = [
@@ -108,6 +124,17 @@ export const projects: Project[] = [
   },
   {
     title: "Subject matter expert",
-    detail: "Engagement to be announced, pending agreement from the parties involved.",
+    detail: "Senior consultant for legal group.",
+    timeframe: "Began 9 April 2026",
+  },
+  {
+    title: "Subject matter expert",
+    detail: "Senior consultant for corporate entity.",
+    timeframe: "Began 2 June 2026",
+  },
+  {
+    title:
+      "Drafting of annual Taxonomic Proposals for the International Committee on Taxonomy of Viruses",
+    link: { label: "ictv.global", href: "https://ictv.global/" },
   },
 ];

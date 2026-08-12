@@ -9,9 +9,8 @@ const AdvisoryBoard = () => {
     >
       <div className="container-custom">
         <div className="border-t border-zinc-300 pt-12 sm:pt-16">
-          <p className="eyebrow">Advisory board</p>
-          <h3 className="mt-3 max-w-2xl text-2xl font-semibold sm:text-3xl md:text-4xl">
-            The expertise behind the work.
+          <h3 className="max-w-2xl text-2xl font-semibold sm:text-3xl md:text-4xl">
+            External Advisors
           </h3>
         </div>
 
@@ -67,7 +66,7 @@ const AdvisoryBoard = () => {
           ))}
 
           {advisoryBoardPendingCount > 0 ? (
-            <div className="flex items-center gap-5 rounded-2xl border border-dashed border-zinc-300 bg-white/40 p-6 sm:gap-6 sm:p-8 lg:col-span-2">
+            <div className="flex items-center gap-5 self-start rounded-2xl border border-dashed border-zinc-300 bg-white/40 p-6 sm:gap-6 sm:p-8">
               <div
                 className="flex shrink-0 items-center -space-x-3"
                 aria-hidden="true"
