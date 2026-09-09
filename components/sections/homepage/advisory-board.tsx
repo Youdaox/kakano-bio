@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { advisoryBoard, advisoryBoardPendingCount } from "@/lib/content/bilingual";
+import { advisoryBoard } from "@/lib/content/bilingual";
 
 const AdvisoryBoard = () => {
   return (
@@ -64,30 +64,6 @@ const AdvisoryBoard = () => {
               </div>
             </article>
           ))}
-
-          {advisoryBoardPendingCount > 0 ? (
-            <div className="flex items-center gap-5 self-start rounded-2xl border border-dashed border-zinc-300 bg-white/40 p-6 sm:gap-6 sm:p-8">
-              <div
-                className="flex shrink-0 items-center -space-x-3"
-                aria-hidden="true"
-              >
-                {Array.from({ length: advisoryBoardPendingCount }).map((_, index) => (
-                  <span
-                    key={index}
-                    className="h-11 w-11 rounded-full border border-dashed border-zinc-300 bg-zinc-100/80 sm:h-12 sm:w-12"
-                  />
-                ))}
-              </div>
-              <div>
-                <p className="text-sm font-medium text-zinc-600">
-                  {advisoryBoardPendingCount} further advisors are joining the board.
-                </p>
-                <p className="mt-1 text-xs text-zinc-400">
-                  Appointments to be announced.
-                </p>
-              </div>
-            </div>
-          ) : null}
         </div>
       </div>
     </section>

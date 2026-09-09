@@ -104,9 +104,6 @@ export const advisoryBoard: AdvisoryMember[] = [
   },
 ];
 
-/** Placeholder slots shown while further advisory appointments are confirmed. */
-export const advisoryBoardPendingCount = 2;
-
 export type ProjectCategory =
   | "Community"
   | "Consultancy"
