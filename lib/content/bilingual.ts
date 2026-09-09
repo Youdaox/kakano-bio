@@ -107,34 +107,102 @@ export const advisoryBoard: AdvisoryMember[] = [
 /** Placeholder slots shown while further advisory appointments are confirmed. */
 export const advisoryBoardPendingCount = 2;
 
+export type ProjectCategory =
+  | "Community"
+  | "Consultancy"
+  | "Global Science"
+  | "Innovation";
+
 export type Project = {
+  category: ProjectCategory;
+  /** Nature of the work, shown as a label above the title. */
+  kind?: string;
   title: string;
   detail?: string;
   timeframe?: string;
+  /** Rendered as "Funded by ...". */
   funder?: string;
-  link?: { label: string; href: string };
+  /** Partner or commissioning body, rendered plain. */
+  organisation?: string;
+  points?: string[];
+  links?: { label: string; href: string }[];
 };
+
+/** Display order for the category groupings. */
+export const projectCategories: ProjectCategory[] = [
+  "Innovation",
+  "Global Science",
+  "Consultancy",
+  "Community",
+];
 
 export const projects: Project[] = [
   {
+    category: "Innovation",
+    kind: "Research Project",
     title:
       "Improving environmental nucleic acid (eNA) detection validation within a more integrated surveillance framework",
     timeframe: "2026–28",
     funder: "Covered Cropping NZ",
   },
   {
-    title: "Subject matter expert",
-    detail: "Senior consultant for legal group.",
-    timeframe: "Began 9 April 2026",
+    category: "Innovation",
+    kind: "Publication",
+    title:
+      "Development and Validation of a Passive Surveillance System for Early Detection of Pepino Mosaic Virus in Commercial Greenhouse Facilities",
+    points: [
+      "Optimised passive sampling method.",
+      "Developed a test to differentiate between intact and denatured (non-viable) virus particles during PCR testing.",
+      "Initiated molecular survey of ubiquitous microorganisms in covered crop systems.",
+    ],
   },
   {
-    title: "Subject matter expert",
-    detail: "Senior consultant for corporate entity.",
-    timeframe: "Began 2 June 2026",
+    category: "Innovation",
+    kind: "Publication",
+    title:
+      "An Integrated Nucleic Acid Sequence-Based Amplification (NASBA) and CRISPR-Cas13a-Based Platform for Accurate and Sensitive Detection of Cucumber Mosaic Virus",
+    points: [
+      "Coupled nucleic acid sequence-based amplification (NASBA) with clustered regularly interspaced short palindromic repeats (CRISPR)-Cas13a to selectively amplify and detect a crop pathogen.",
+      "Optimised method for lyophilisation and long-term storage for point-of-use settings.",
+    ],
   },
   {
+    category: "Global Science",
+    kind: "Taxonomy",
     title:
       "Drafting of annual Taxonomic Proposals for the International Committee on Taxonomy of Viruses",
-    link: { label: "ictv.global", href: "https://ictv.global/" },
+    links: [{ label: "ictv.global", href: "https://ictv.global/" }],
+  },
+  {
+    category: "Global Science",
+    kind: "Peer-Review",
+    title: "Journal editorial appointments",
+    points: [
+      "Section Editor — Frontiers in Virology",
+      "Review Editor — Frontiers in Microbiology",
+      "Editor — PhytoFrontiers",
+      "Editor — Viruses",
+    ],
+  },
+  {
+    category: "Consultancy",
+    kind: "Expert Scientific Adviser",
+    title:
+      "Independent review of the virus management program of investments and future research and development directions",
+    organisation: "Grains Research & Development Corporation (Australia)",
+    timeframe: "Jun–Aug 2026",
+  },
+  {
+    category: "Consultancy",
+    kind: "Expert Scientific Adviser",
+    title: "Adviser to an Australian legal company",
+    timeframe: "Started Apr 2026, ongoing",
+  },
+  {
+    category: "Community",
+    kind: "Senior Judge",
+    title: "Senior Judge at ScienceFair",
+    timeframe: "28 August 2026",
+    links: [{ label: "scifair.org.nz", href: "https://www.scifair.org.nz/" }],
   },
 ];
