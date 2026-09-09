@@ -4,7 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import BackToTop from "@/components/ui/buttons/BackToTop";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Toaster />
         <Footer />
         <BackToTop />
+        <Analytics />
       </body>
     </html>
   );
