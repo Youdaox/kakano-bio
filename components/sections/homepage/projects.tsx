@@ -53,13 +53,38 @@ const Projects = () => {
                           </p>
 
                           {project.organisation ? (
-                            <p className="mt-1.5 text-sm text-muted">
-                              {project.organisation}
+                            <p className="mt-1.5 text-sm text-zinc-700">
+                              {project.organisationHref ? (
+                                <a
+                                  href={project.organisationHref}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="inline-flex items-center gap-1.5 underline decoration-zinc-300 underline-offset-4 hover:text-primary hover:decoration-primary/40"
+                                >
+                                  {project.organisation}
+                                  <svg
+                                    aria-hidden="true"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    className="h-3 w-3 shrink-0"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      d="M14 5h5v5M19 5l-7.5 7.5M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4"
+                                    />
+                                  </svg>
+                                </a>
+                              ) : (
+                                project.organisation
+                              )}
                             </p>
                           ) : null}
 
                           {project.detail ? (
-                            <p className="mt-2 text-sm leading-relaxed text-muted">
+                            <p className="mt-2 text-sm leading-relaxed text-zinc-700">
                               {project.detail}
                             </p>
                           ) : null}
@@ -69,9 +94,41 @@ const Projects = () => {
                               {project.points.map((point, pointIndex) => (
                                 <li
                                   key={pointIndex}
-                                  className="text-sm leading-relaxed text-muted"
+                                  className="text-sm leading-relaxed text-zinc-700"
                                 >
-                                  {point}
+                                  {typeof point === "string" ? (
+                                    point
+                                  ) : (
+                                    <>
+                                      {point.prefix ? `${point.prefix} ` : null}
+                                      {point.href ? (
+                                        <a
+                                          href={point.href}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          className="inline-flex items-center gap-1.5 underline decoration-zinc-300 underline-offset-4 hover:text-primary hover:decoration-primary/40"
+                                        >
+                                          {point.text}
+                                          <svg
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            className="h-3 w-3 shrink-0"
+                                          >
+                                            <path
+                                              strokeLinecap="round"
+                                              strokeLinejoin="round"
+                                              d="M14 5h5v5M19 5l-7.5 7.5M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4"
+                                            />
+                                          </svg>
+                                        </a>
+                                      ) : (
+                                        point.text
+                                      )}
+                                    </>
+                                  )}
                                 </li>
                               ))}
                             </ul>
@@ -87,9 +144,34 @@ const Projects = () => {
                                 </span>
                               ) : null}
                               {project.funder ? (
-                                <span className="rounded-full border border-secondary/20 bg-secondary/10 px-2.5 py-1 text-xs font-medium text-primary">
-                                  Funded by {project.funder}
-                                </span>
+                                project.funderHref ? (
+                                  <a
+                                    href={project.funderHref}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-xs font-medium text-zinc-700 shadow-sm hover:border-primary/30 hover:text-primary"
+                                  >
+                                    Funded by {project.funder}
+                                    <svg
+                                      aria-hidden="true"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      strokeWidth="2"
+                                      className="h-3 w-3 shrink-0"
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M14 5h5v5M19 5l-7.5 7.5M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4"
+                                      />
+                                    </svg>
+                                  </a>
+                                ) : (
+                                  <span className="rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-xs font-medium text-zinc-700 shadow-sm">
+                                    Funded by {project.funder}
+                                  </span>
+                                )
                               ) : null}
                               {project.links?.map((link) => (
                                 <a

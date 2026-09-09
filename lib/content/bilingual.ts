@@ -110,6 +110,15 @@ export type ProjectCategory =
   | "Global Science"
   | "Innovation";
 
+export type ProjectPoint =
+  | string
+  | {
+      /** Plain lead-in text, e.g. a role, kept outside the link. */
+      prefix?: string;
+      text: string;
+      href?: string;
+    };
+
 export type Project = {
   category: ProjectCategory;
   /** Nature of the work, shown as a label above the title. */
@@ -119,9 +128,13 @@ export type Project = {
   timeframe?: string;
   /** Rendered as "Funded by ...". */
   funder?: string;
-  /** Partner or commissioning body, rendered plain. */
+  /** Makes the funder pill a link out to the funding body. */
+  funderHref?: string;
+  /** Partner or commissioning body, rendered beneath the title. */
   organisation?: string;
-  points?: string[];
+  /** Makes the organisation line a link out to that body. */
+  organisationHref?: string;
+  points?: ProjectPoint[];
   links?: { label: string; href: string }[];
 };
 
@@ -141,6 +154,7 @@ export const projects: Project[] = [
       "Improving environmental nucleic acid (eNA) detection validation within a more integrated surveillance framework",
     timeframe: "2026–28",
     funder: "Covered Cropping NZ",
+    funderHref: "https://www.tomatoesnz.co.nz/latest-news/covered-cropping-nz/",
   },
   {
     category: "Innovation",
@@ -152,6 +166,12 @@ export const projects: Project[] = [
       "Developed a test to differentiate between intact and denatured (non-viable) virus particles during PCR testing.",
       "Initiated molecular survey of ubiquitous microorganisms in covered crop systems.",
     ],
+    links: [
+      {
+        label: "View publication",
+        href: "https://www.mdpi.com/1999-4915/18/8/866",
+      },
+    ],
   },
   {
     category: "Innovation",
@@ -161,6 +181,12 @@ export const projects: Project[] = [
     points: [
       "Coupled nucleic acid sequence-based amplification (NASBA) with clustered regularly interspaced short palindromic repeats (CRISPR)-Cas13a to selectively amplify and detect a crop pathogen.",
       "Optimised method for lyophilisation and long-term storage for point-of-use settings.",
+    ],
+    links: [
+      {
+        label: "View publication",
+        href: "https://pubs.acs.org/asbcd6/article-abstract/14/10/4001/3744913/An-Integrated-Nucleic-Acid-Sequence-Based",
+      },
     ],
   },
   {
@@ -175,10 +201,26 @@ export const projects: Project[] = [
     kind: "Peer-Review",
     title: "Journal editorial appointments",
     points: [
-      "Section Editor — Frontiers in Virology",
-      "Review Editor — Frontiers in Microbiology",
-      "Editor — PhytoFrontiers",
-      "Editor — Viruses",
+      {
+        prefix: "Section Editor —",
+        text: "Frontiers in Virology",
+        href: "https://www.frontiersin.org/journals/virology/editors",
+      },
+      {
+        prefix: "Review Editor —",
+        text: "Frontiers in Microbiology",
+        href: "https://www.frontiersin.org/journals/microbiology/sections/virology",
+      },
+      {
+        prefix: "Editor —",
+        text: "PhytoFrontiers",
+        href: "https://apsjournals.apsnet.org/page/phytofr/about",
+      },
+      {
+        prefix: "Editor —",
+        text: "Viruses",
+        href: "https://www.mdpi.com/journal/viruses",
+      },
     ],
   },
   {
@@ -187,6 +229,7 @@ export const projects: Project[] = [
     title:
       "Independent review of the virus management program of investments and future research and development directions",
     organisation: "Grains Research & Development Corporation (Australia)",
+    organisationHref: "https://grdc.com.au/",
     timeframe: "Jun–Aug 2026",
   },
   {
